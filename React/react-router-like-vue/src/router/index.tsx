@@ -29,8 +29,8 @@ export function RouterView({
   middleWare = (route) => route,
 }: PropsType) {
   /**
-   * @description route middlewareGanerator 함수이며 각 route module에서
-   * import 해온 배열 정보 중 meta 필드를 확인하는 방식으로 작동
+   * @description route middlewareGanerator 함수이며 Route 배열과 네비게이션가드 function을 전달 받으면 
+   * 각 route 마다 네비게이션가드 함수를 호출하여 검증
    */
   const middlewareGanerator = (
     routes: Route[],
@@ -48,7 +48,7 @@ export function RouterView({
   };
 
   /**
-   * @description 현재 routing될 컴포넌트의 route 정보를 추출하여 {routeInfo, ,meta} 형식으로 반환
+   * @description 현재 routing될 컴포넌트의 route 정보를 추출하여 {routeInfo, meta} 형식으로 반환
    */
   const getCurrentRouteInfo = (
     currentComponent: React.ReactElement<
@@ -81,7 +81,7 @@ export function RouterView({
   console.log('routing!');
 
   /**
-   * @description middleware 검증 후 route 배열 정보를 routes 변수에 저장
+   * @description middleware 검증 후 Route 배열 정보를 routes 변수에 저장
    */
   const routes = middlewareGanerator(routeList, middleWare);
 
