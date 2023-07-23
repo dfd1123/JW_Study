@@ -1,0 +1,9 @@
+body{
+    margin: 0;
+}
+#firstCanvas{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1x;
+}
