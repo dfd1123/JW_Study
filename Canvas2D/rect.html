@@ -4,22 +4,28 @@
     <title>Canvas</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="./modernizr.js"></script>
+    <style>
+      canvas {
+        background: #eee;
+      }
+    </style>
   </head>
 
   <body>
-    <canvas>이 브라우저는 캔버스를 지원하지 않습니다.</canvas>
+    <canvas class="canvas" width="600" height="400">이 브라우저는 캔버스를 지원하지 않습니다.</canvas>
 
     <script>
-      // Canvas 지원 여부 확인
-      if (Modernizr.canvas) {
-        console.log('Canvas를 지원하는 브라우저');
-      }
+      // fillRect
+      // clearRect
+      // strokeRect
+      const canvas = document.querySelector('.canvas');
+      const context = canvas.getContext('2d');
 
-      const canvas = document.querySelector('canvas');
-      if (canvas.getContext) {
-        console.log('캔버스 지원');
-      }
+      context.fillRect(50, 50, 100, 100);
+      context.fillStyle = 'red';
+      context.fillRect(0, 0, 100, 100);
+      context.clearRect(80, 80, 50, 50);
+      context.strokeRect(150, 150, 100, 100);
     </script>
   </body>
 </html>

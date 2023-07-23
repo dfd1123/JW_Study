@@ -1,3 +1,6 @@
-function solution(a, b) {
-    return a.reduce((acc,_,index) => acc + (a[index] * b[index]), 0);
+function solution(n) {
+    const decimal = n.toString(3).split('').reverse().join('');
+    return parseInt(decimal, 3);
 }
+
+console.log(solution(45));
