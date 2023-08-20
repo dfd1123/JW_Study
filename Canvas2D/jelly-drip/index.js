@@ -18,7 +18,7 @@ class CircleParticle {
 
     update(){
         if(this.y >= canvasHeight + this.radius) {
-            this.vy = (this.radius / 10) * 2;
+            this.vy = (this.radius / 10) * 2; 
             this.y = -this.radius * 2;
             this.x = randomNumber(0, canvasWidth);
         }
