@@ -78,19 +78,19 @@ function init() {
 
   gsap.to(card.mesh.rotation, {y: -Math.PI * 4, duration: 2.5, ease: "back.out(2.5)" });
 
-  const cardFolder = gui.addFolder('Card');
+  // const cardFolder = gui.addFolder('Card');
 
-  cardFolder.add(card.mesh.material, 'roughness')
-  .min(0)
-  .max(1)
-  .step(0.01)
-  .name('material.roughness')
+  // cardFolder.add(card.mesh.material, 'roughness')
+  // .min(0)
+  // .max(1)
+  // .step(0.01)
+  // .name('material.roughness')
 
-  cardFolder.add(card.mesh.material, 'metalness')
-  .min(0)
-  .max(1)
-  .step(0.01)
-  .name('material.metalness')
+  // cardFolder.add(card.mesh.material, 'metalness')
+  // .min(0)
+  // .max(1)
+  // .step(0.01)
+  // .name('material.metalness')
 
 
 
