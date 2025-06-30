@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.wrapper{
+  position: relative;
+  z-index: 1;
+  min-height: 1000vh;
+}
+
+header {
+  padding: 120px 24px;
+}
